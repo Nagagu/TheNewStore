@@ -9,11 +9,11 @@ const INITIAL_STATE = {
 const cartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.ADD_PRODUCT:
-      let itemFromCartProducts = state.cartProducts.find(
+      const itemFromCartProducts = state.cartProducts.find(
         (item) => item.id === action.payload.id
       );
       if (itemFromCartProducts != null) itemFromCartProducts.quantity++;
-      let cartProducts =
+      const cartProducts =
         itemFromCartProducts == null
           ? [...state.cartProducts, { ...action.payload, quantity: 1 }]
           : [...state.cartProducts];
@@ -27,16 +27,16 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
       };
     case actionTypes.REMOVE_PRODUCT:
-      const itemFromCartProducts2 = state.cartProducts.find(
+      const itemFromCartProductsToRemove = state.cartProducts.find(
         (item) => item.id === action.payload.id
       );
-      if (itemFromCartProducts2 != null) itemFromCartProducts2.quantity--;
-      const cartProducts2 = [
+      if (itemFromCartProductsToRemove != null) itemFromCartProductsToRemove.quantity--;
+      const newCartProducts = [
         ...state.cartProducts.filter((item) => item.quantity > 0),
       ];
       return {
-        cartProducts: cartProducts2,
-        cartTotalNumber: cartProducts2.length,
+        cartProducts: newCartProducts,
+        cartTotalNumber: newCartProducts.length,
       };
     default:
       return state;
