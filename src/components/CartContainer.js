@@ -12,7 +12,7 @@ const CartContainer = (props) => {
   };
   return (
     <div className="cartContainer">
-      <Button variant="dark" onClick={showCartContainer}>
+      <Button variant="light" onClick={showCartContainer}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"

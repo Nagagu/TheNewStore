@@ -7,6 +7,10 @@ import Product from "./Product";
 const ProductsList = (props) => {
   console.log(props);
   const [data, setData] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
 
   // const [cartTotalNumber, setcartTotalNumber] = useState(0);
 
@@ -22,11 +26,55 @@ const ProductsList = (props) => {
 
   return (
     <div>
-      <h1>Prueba</h1>
+      <div className="hero"></div>
+      {/* <div className="input-search" onChange={handleInputChange}>
+        <input
+          type="text"
+          placeholder="Search "
+          className="inputSearch form-control"
+        />
+      </div> */}
+      {/* <form className="search-container">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="What do you wish for today?"
+          className="form-control"
+        />
+        <a href="#">
+          <img
+            className="search-icon"
+            src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
+          />
+        </a>
+      </form> */}
+      <div className="search-container">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="What do you wish for today?"
+          className="form-control"
+        />
+        {/* <a href="#">
+          <img
+            className="search-icon"
+            src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
+          />
+        </a> */}
+        <a href="#">
+          <div className="search-icon">
+            <i class="fas fa-search"></i>
+          </div>
+        </a>
+      </div>
       <div className="productList">
-        {data.map((item) => {
-          return <Product item={item} key={item.id} />;
-        })}
+        {data
+          .filter((item) =>
+            item.title.toLowerCase().includes(inputValue.toLowerCase())
+          )
+          .map((item) => {
+            return <Product item={item} key={item.id} />;
+          })}
       </div>
     </div>
   );
