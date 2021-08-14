@@ -15,16 +15,24 @@ const CartItem = (props) => {
   };
   return (
     <div className="cartItem">
-      <Button variant="outline-dark" onClick={() => handleRemoveFromCart(item)}>
-        -
-      </Button>
-      <div className="itemInCart">
-        {item.title} {item.quantity}
-      </div>
-      <Button variant="outline-dark" onClick={() => handleAddToCart(item)}>
-        +
-      </Button>
+      <img src={item.image} />
+      {item.title}
+
+      <button onClick={() => handleRemoveFromCart(item)}> - </button>
+      <div>{item.quantity}</div>
+      <button onClick={() => handleAddToCart(item)}> + </button>
     </div>
+    // <div className="cartItem">
+    //   <Button variant="outline-dark" onClick={() => handleRemoveFromCart(item)}>
+    //     -
+    //   </Button>
+    //   <div className="itemInCart">
+    //     {item.title} {item.quantity}
+    //   </div>
+    //   <Button variant="outline-dark" onClick={() => handleAddToCart(item)}>
+    //     +
+    //   </Button>
+    // </div>
   );
 };
 const mapStateToProps = (state) => {

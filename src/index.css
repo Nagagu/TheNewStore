@@ -123,16 +123,29 @@ input {
 .addButton:hover {
   background-color: #d18a18;
 }
-.cartContainer {
+.cart-navbar {
+  /* position: absolute;
+  right: 2vw; */
+  display: flex;
+  align-items: flex-end;
+  margin-left: 18vw;
+  margin-top: -1vh;
+}
+.cart-container {
   position: absolute;
-  right: 2vw;
+  z-index: 999;
 }
 .cartContainer Button {
   padding-bottom: 0px;
 }
 .cartItem {
-  background-color: grey;
+  background-color: #f8f9fa;
   display: flex;
+  border-radius: 3px;
+}
+.cartItem img {
+  height: 6vh;
+  margin: 3vw;
 }
 .itemInCart {
   padding: 10px;
