@@ -134,7 +134,33 @@ input {
 .cart-container {
   position: absolute;
   z-index: 999;
+  background-color: #f8f9fa;
+  height: auto;
+  width: 63.5vw;
+  left: 33vw;
+  padding: 4vw;
 }
+.items {
+  display: flex;
+}
+.cart-container img {
+  height: 6vh;
+  margin: 3vw;
+}
+.item-title {
+  margin: 0px 3vw;
+  font-size: 0.8rem;
+}
+.buttons-container {
+  display: -webkit-inline-box;
+  margin-top: 2vh;
+}
+.buttons-container button {
+  border: none;
+  background: none;
+  margin: 0px 2vw;
+}
+
 .cartContainer Button {
   padding-bottom: 0px;
 }

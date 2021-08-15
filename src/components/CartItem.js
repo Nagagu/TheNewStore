@@ -14,14 +14,24 @@ const CartItem = (props) => {
     props.removeFromCart(item);
   };
   return (
-    <div className="cartItem">
+    // <div className="cartItem">
+    <div className="items">
       <img src={item.image} />
-      {item.title}
-
-      <button onClick={() => handleRemoveFromCart(item)}> - </button>
-      <div>{item.quantity}</div>
-      <button onClick={() => handleAddToCart(item)}> + </button>
+      <div className="item-title">{item.title}</div>
+      <div className="buttons-container">
+        {" "}
+        <button onClick={() => handleRemoveFromCart(item)}>
+          {" "}
+          <i class="fas fa-minus-circle"></i>
+        </button>
+        <div>{item.quantity}</div>
+        <button onClick={() => handleAddToCart(item)}>
+          {" "}
+          <i class="fas fa-plus-circle"></i>{" "}
+        </button>
+      </div>
     </div>
+
     // <div className="cartItem">
     //   <Button variant="outline-dark" onClick={() => handleRemoveFromCart(item)}>
     //     -
