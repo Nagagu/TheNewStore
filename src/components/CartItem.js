@@ -13,36 +13,26 @@ const CartItem = (props) => {
     console.log("removiendo");
     props.removeFromCart(item);
   };
-  return (
-    // <div className="cartItem">
-    <div className="items">
-      <img src={item.image} />
-      <div className="item-title">{item.title}</div>
-      <div className="buttons-container">
-        {" "}
-        <button onClick={() => handleRemoveFromCart(item)}>
-          {" "}
-          <i class="fas fa-minus-circle"></i>
-        </button>
-        <div>{item.quantity}</div>
-        <button onClick={() => handleAddToCart(item)}>
-          {" "}
-          <i class="fas fa-plus-circle"></i>{" "}
-        </button>
-      </div>
-    </div>
 
-    // <div className="cartItem">
-    //   <Button variant="outline-dark" onClick={() => handleRemoveFromCart(item)}>
-    //     -
-    //   </Button>
-    //   <div className="itemInCart">
-    //     {item.title} {item.quantity}
-    //   </div>
-    //   <Button variant="outline-dark" onClick={() => handleAddToCart(item)}>
-    //     +
-    //   </Button>
-    // </div>
+  return (
+    <>
+      <div className="items">
+        <img src={item.image} />
+        <div className="item-title">{item.title}</div>
+        <div className="buttons-container">
+          {" "}
+          <button onClick={() => handleRemoveFromCart(item)}>
+            {" "}
+            <i class="fas fa-minus-circle"></i>
+          </button>
+          <div>{item.quantity}</div>
+          <button onClick={() => handleAddToCart(item)}>
+            {" "}
+            <i class="fas fa-plus-circle"></i>{" "}
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 const mapStateToProps = (state) => {

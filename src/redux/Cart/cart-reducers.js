@@ -4,6 +4,8 @@ const INITIAL_STATE = {
   cartTotalNumber: 0,
 
   cartProducts: [], // {id, title, img, price, amount}
+
+  totalPrice: 0,
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -30,7 +32,8 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       const itemFromCartProductsToRemove = state.cartProducts.find(
         (item) => item.id === action.payload.id
       );
-      if (itemFromCartProductsToRemove != null) itemFromCartProductsToRemove.quantity--;
+      if (itemFromCartProductsToRemove != null)
+        itemFromCartProductsToRemove.quantity--;
       const newCartProducts = [
         ...state.cartProducts.filter((item) => item.quantity > 0),
       ];
@@ -38,6 +41,13 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         cartProducts: newCartProducts,
         cartTotalNumber: newCartProducts.length,
       };
+    case actionTypes.GET_TOTAL_PRICE:
+      if (state.cartProducts === null || state.cartProducts.length === 0)
+        return { ...state };
+      const totalPrice = state.cartProducts
+        .map((item) => item.price * item.quantity)
+        .reduce((acc, value) => acc + value);
+      return { ...state, totalPrice: totalPrice };
     default:
       return state;
   }

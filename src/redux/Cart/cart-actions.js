@@ -9,6 +9,7 @@ export const addToCart = (item) => {
         ...item,
       },
     });
+    dispatch(getTotalPrice());
   };
 };
 
@@ -22,10 +23,20 @@ export const getcartTotalNumber = () => {
 };
 
 export const removeFromCart = (item) => {
+  return (dispatch) => {
+    dispatch({
+      type: actionTypes.REMOVE_PRODUCT,
+      payload: {
+        ...item,
+      },
+    });
+    dispatch(getTotalPrice());
+  };
+};
+
+export const getTotalPrice = () => {
   return {
-    type: actionTypes.REMOVE_PRODUCT,
-    payload: {
-      ...item,
-    },
+    type: actionTypes.GET_TOTAL_PRICE,
+    payload: {},
   };
 };
