@@ -5,11 +5,13 @@ import { Provider } from "react-redux";
 import NavBar from "./components/NavBar";
 import ProductsList from "./components/ProductsList";
 import store from "./store";
+import { Footer } from "./components/Footer";
 
 ReactDOM.render(
   <Provider store={store}>
     <NavBar />
     <ProductsList />
+    <Footer />
     {/* <GetProducts /> */}
   </Provider>,
 

@@ -25,7 +25,7 @@ const CartItem = (props) => {
             {" "}
             <i class="fas fa-minus-circle"></i>
           </button>
-          <div>{item.quantity}</div>
+          <div className="quantity">{item.quantity}</div>
           <button onClick={() => handleAddToCart(item)}>
             {" "}
             <i class="fas fa-plus-circle"></i>{" "}

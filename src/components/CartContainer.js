@@ -15,7 +15,7 @@ const CartContainer = (props) => {
     <div>
       <div className="cart-navbar">
         <button variant="light" onClick={showCartContainer}>
-          <i class="fa fa-shopping-cart"></i>
+          <i class="fas fa-shopping-basket"></i>
         </button>
         <span>{props.cartState.cartTotalNumber}</span>
       </div>
@@ -30,9 +30,10 @@ const CartContainer = (props) => {
                 return <CartItem key={item.id} item={item} />;
               })
             )}{" "}
-            <div className="total-conatiner">
-              Total: {totalPrice.toFixed(2)}
+            <div className="total-container">
+              Total: {totalPrice.toFixed(2)}€
             </div>
+            <button className="checkout-btn">Checkout</button>
           </div>
         </>
       )}

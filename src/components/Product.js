@@ -28,18 +28,37 @@ const Product = (props) => {
   };
 
   return (
+    // <div className="product">
+    //   <img src={image} alt={title} />{" "}
+    //   <div className="productTitle">{title.substring(0, 40)}</div>
+    //   <div className="priceProduct">{price} €</div>
+    //   <button
+    //     type=""
+    //     className="addButton"
+    //     onClick={() => props.addToCart(item)}
+    //   >
+    //     ADD
+    //   </button>
+    // </div>
     <div className="product">
-      <img src={image} alt={title} />
-      <div className="productTitle">{title}</div>
-      <div className="priceProduct">{price} €</div>
+      <div>
+        {" "}
+        <img src={image} alt={title} />
+      </div>
 
-      <button
-        type=""
-        className="addButton"
-        onClick={() => props.addToCart(item)}
-      >
-        ADD
-      </button>
+      <div className="content-product">
+        {" "}
+        {/* <div className="productTitle">{title.substring(0, 40)}</div> */}
+        <div className="productTitle">{title}</div>
+        <div className="priceProduct">{price} €</div>
+        <button
+          type=""
+          className="addButton"
+          onClick={() => props.addToCart(item)}
+        >
+          ADD
+        </button>
+      </div>
     </div>
   );
 };
