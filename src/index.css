@@ -145,7 +145,7 @@ nav.menu a {
   pointer-events: all;
 }
 .checkout-btn:hover {
-  background-color: aqua;
+  background-color: #6d5e4f;
 }
 .search-container {
   /* width: 70vw;
@@ -232,7 +232,7 @@ input {
   padding: 3vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 5vw;
   grid-auto-rows: minmax(100px, auto);
 }

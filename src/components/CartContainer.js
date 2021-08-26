@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button, NavItem } from "react-bootstrap";
 import { connect, useSelector } from "react-redux";
 import CartItem from "./CartItem";
 

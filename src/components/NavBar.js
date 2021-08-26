@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import { Nav, Navbar } from "react-bootstrap";
 import { connect } from "react-redux";
 import CartContainer from "./CartContainer";
 

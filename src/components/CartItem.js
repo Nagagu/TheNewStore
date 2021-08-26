@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { addToCart, removeFromCart } from "../redux/Cart/cart-actions";
 
