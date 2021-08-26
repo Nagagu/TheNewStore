@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/TheNewStore/static/css/main.ad73a745.chunk.css",
-    "main.js": "/TheNewStore/static/js/main.137c94e6.chunk.js",
-    "main.js.map": "/TheNewStore/static/js/main.137c94e6.chunk.js.map",
+    "main.css": "/TheNewStore/static/css/main.63406161.chunk.css",
+    "main.js": "/TheNewStore/static/js/main.04695697.chunk.js",
+    "main.js.map": "/TheNewStore/static/js/main.04695697.chunk.js.map",
     "runtime-main.js": "/TheNewStore/static/js/runtime-main.184baeee.js",
     "runtime-main.js.map": "/TheNewStore/static/js/runtime-main.184baeee.js.map",
-    "static/js/2.ab059245.chunk.js": "/TheNewStore/static/js/2.ab059245.chunk.js",
-    "static/js/2.ab059245.chunk.js.map": "/TheNewStore/static/js/2.ab059245.chunk.js.map",
+    "static/js/2.6e1cefbf.chunk.js": "/TheNewStore/static/js/2.6e1cefbf.chunk.js",
+    "static/js/2.6e1cefbf.chunk.js.map": "/TheNewStore/static/js/2.6e1cefbf.chunk.js.map",
     "index.html": "/TheNewStore/index.html",
-    "static/css/main.ad73a745.chunk.css.map": "/TheNewStore/static/css/main.ad73a745.chunk.css.map",
-    "static/js/2.ab059245.chunk.js.LICENSE.txt": "/TheNewStore/static/js/2.ab059245.chunk.js.LICENSE.txt",
+    "static/css/main.63406161.chunk.css.map": "/TheNewStore/static/css/main.63406161.chunk.css.map",
+    "static/js/2.6e1cefbf.chunk.js.LICENSE.txt": "/TheNewStore/static/js/2.6e1cefbf.chunk.js.LICENSE.txt",
     "static/media/index.css": "/TheNewStore/static/media/passenger.1fdbc4e5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.184baeee.js",
-    "static/js/2.ab059245.chunk.js",
-    "static/css/main.ad73a745.chunk.css",
-    "static/js/main.137c94e6.chunk.js"
+    "static/js/2.6e1cefbf.chunk.js",
+    "static/css/main.63406161.chunk.css",
+    "static/js/main.04695697.chunk.js"
   ]
 }
