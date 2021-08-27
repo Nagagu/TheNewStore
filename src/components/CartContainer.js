@@ -22,19 +22,42 @@ const CartContainer = (props) => {
       {cartContainerDisplay && (
         <>
           <div className="cart-container">
-            {props.cartState.cartTotalNumber === 0 ? (
-              <h5> Your cart is empty</h5>
-            ) : (
-              props.cartState.cartProducts.map((item) => {
-                return <CartItem key={item.id} item={item} />;
-              })
-            )}{" "}
-            <div className="total-container">
-              Total: {totalPrice.toFixed(2)}€
+            <div className="minicart">
+              {props.cartState.cartTotalNumber === 0 ? (
+                <h5> Your cart is empty</h5>
+              ) : (
+                props.cartState.cartProducts.map((item) => {
+                  return (
+                    <>
+                      <div className="item-list">
+                        <CartItem key={item.id} item={item} />
+                      </div>
+                    </>
+                  );
+                })
+              )}{" "}
+              <div className="total-container">
+                Total: {totalPrice.toFixed(2)}€
+              </div>
+              <button className="checkout-btn">Checkout</button>
             </div>
-            <button className="checkout-btn">Checkout</button>
           </div>
         </>
+        // <>
+        //   <div className="cart-container">
+        //     {props.cartState.cartTotalNumber === 0 ? (
+        //       <h5> Your cart is empty</h5>
+        //     ) : (
+        //       props.cartState.cartProducts.map((item) => {
+        //         return <CartItem key={item.id} item={item} />;
+        //       })
+        //     )}{" "}
+        //     <div className="total-container">
+        //       Total: {totalPrice.toFixed(2)}€
+        //     </div>
+        //     <button className="checkout-btn">Checkout</button>
+        //   </div>
+        // </>
       )}
     </div>
   );

@@ -57,6 +57,7 @@ nav.menu a {
 .cart-navbar {
   display: flex;
   align-items: center;
+  margin-right: 2vw;
 }
 .cart-navbar button {
   border: none;
@@ -69,7 +70,7 @@ nav.menu a {
   color: white;
   font-weight: 100;
 }
-.cart-container {
+/* .cart-container {
   position: absolute;
   z-index: 999;
   background-color: white;
@@ -83,12 +84,29 @@ nav.menu a {
   padding: 4vw;
   pointer-events: none;
   box-shadow: -2px 5px 10px 0px rgb(0 0 0 / 65%);
+} */
+.cart-container {
+  position: absolute;
+  z-index: 999;
+  left: 28vw;
+  width: 65vw;
+}
+.minicart {
+  background-color: white;
+  color: black;
+  box-shadow: -2px 5px 10px 0px rgb(0 0 0 / 65%);
+  padding: 4vw;
+  overflow-y: scroll;
+  max-height: 50vh;
 }
 .items {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #e6dfdf;
+}
+.item-list {
+  max-height: 20vh;
 }
 .cart-container img {
   height: 6vh;
@@ -103,6 +121,10 @@ nav.menu a {
   margin: 0px 3vw;
   font-size: 0.8rem;
   text-align: start;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .buttons-container {
   display: -webkit-inline-box;
@@ -123,10 +145,7 @@ nav.menu a {
   display: flex;
   border-radius: 3px;
 }
-.cartItem img {
-  height: 6vh;
-  margin: 3vw;
-}
+
 .itemInCart {
   padding: 10px;
 }
@@ -137,7 +156,7 @@ nav.menu a {
   margin-top: 3vh;
   width: 100%;
   background-color: #c3a78b;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   padding: 4px;
   border: none;
   color: black;
@@ -290,8 +309,8 @@ input {
   }
 
   .cart-container {
-    width: 50vw;
-    left: 48vw;
+    width: 58vw;
+    left: 35vw;
   }
   .hero {
     background-position-y: -43px;
@@ -312,14 +331,17 @@ input {
     padding: 0px 4vw;
   }
   .cart-container {
-    width: 42vw;
-    left: 56vw;
+    width: 55vw;
+    left: 40vw;
     padding: 2vw;
   }
   .cart-container img {
     height: initial;
     min-width: 62px;
     max-width: 30px;
+  }
+  .buttons-container {
+    margin-top: 0;
   }
   .hero {
     background-position-y: -80px;
@@ -337,9 +359,9 @@ input {
     padding: 0px 1vw;
   }
   .cart-container {
-    width: 24vw;
+    width: 36vw;
     padding: 0px;
-    left: 74vw;
+    left: 58vw;
   }
   .cart-container h5 {
     margin-top: 25px;
@@ -347,6 +369,7 @@ input {
   .cart-container img {
     margin: 3vh 2vw;
   }
+
   .hero {
     background-position-y: -25vh;
     height: 71vh;
@@ -358,6 +381,11 @@ input {
   }
   .productTitle {
     font-size: 1.1em;
+  }
+  .minicart {
+    overflow-y: scroll;
+    padding: 2vw;
+    max-height: 60vh;
   }
   .buttons-container {
     margin-right: 30px;
