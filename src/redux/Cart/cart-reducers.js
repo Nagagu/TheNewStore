@@ -14,7 +14,9 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       const itemFromCartProducts = state.cartProducts.find(
         (item) => item.id === action.payload.id
       );
+
       if (itemFromCartProducts != null) itemFromCartProducts.quantity++;
+
       const cartProducts =
         itemFromCartProducts == null
           ? [...state.cartProducts, { ...action.payload, quantity: 1 }]
@@ -24,10 +26,10 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         cartProducts: cartProducts,
         cartTotalNumber: cartProducts.length,
       };
-    case actionTypes.GET_CART_NUMBERS:
-      return {
-        ...state,
-      };
+    // case actionTypes.GET_CART_NUMBERS:
+    //   return {
+    //     ...state,
+    //   };
     case actionTypes.REMOVE_PRODUCT:
       const itemFromCartProductsToRemove = state.cartProducts.find(
         (item) => item.id === action.payload.id

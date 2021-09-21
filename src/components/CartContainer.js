@@ -37,7 +37,7 @@ const CartContainer = (props) => {
                 })
               )}{" "}
               <div className="total-container">
-                Total: {totalPrice.toFixed(2)}€
+                Total: {totalPrice?.toFixed(2)}€
               </div>
               <button className="checkout-btn">Checkout</button>
             </div>

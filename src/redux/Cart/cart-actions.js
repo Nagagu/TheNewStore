@@ -13,14 +13,14 @@ export const addToCart = (item) => {
   };
 };
 
-export const getcartTotalNumber = () => {
-  return (dispatch) => {
-    console.log("getting number");
-    dispatch({
-      type: actionTypes.GET_CART_NUMBERS,
-    });
-  };
-};
+// export const getcartTotalNumber = () => {
+//   return (dispatch) => {
+//     console.log("getting number");
+//     dispatch({
+//       type: actionTypes.GET_CART_NUMBERS,
+//     });
+//   };
+// };
 
 export const removeFromCart = (item) => {
   return (dispatch) => {
